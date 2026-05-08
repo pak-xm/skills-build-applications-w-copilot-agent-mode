@@ -1,10 +1,23 @@
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Activities from './components/Activities';
 import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
 import './App.css';
+
+function Home() {
+  return (
+    <div className="card border-0 shadow-sm rounded-4">
+      <div className="card-body p-4 p-lg-5">
+        <h2 className="h3 fw-bold mb-2">Welcome to the OvtoFit</h2>
+        <p className="mb-0 text-secondary">
+          Use the navigation above to explore users, activities, teams, leaderboard, and workouts.
+        </p>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -34,6 +47,9 @@ function App() {
       <nav className="navbar navbar-expand-lg bg-white rounded-4 shadow-sm mb-4 px-3 py-2">
         <ul className="navbar-nav nav nav-pills flex-row flex-wrap gap-2">
           <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/users">Users</Link>
           </li>
           <li className="nav-item">
@@ -53,7 +69,7 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Navigate to="/users" replace />} />
+          <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/teams" element={<Teams />} />

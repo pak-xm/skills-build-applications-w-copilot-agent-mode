@@ -17,7 +17,6 @@ import os
 
 from django.contrib import admin
 from django.urls import include, path
-from django.views.generic import RedirectView
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.routers import DefaultRouter
@@ -49,7 +48,7 @@ router.register(r'workouts', views.WorkoutViewSet, basename='workout')
 router.register(r'leaderboard', views.LeaderboardViewSet, basename='leaderboard')
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='api/', permanent=False), name='root-redirect'),
+    path('', api_root, name='root'),
     path('api/', api_root, name='api-root'),
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),

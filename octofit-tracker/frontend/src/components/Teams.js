@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { getApiEndpoint } from '../api';
 
+// Codespaces endpoint reference: https://$REACT_APP_CODESPACE_NAME-8000.app.github.dev/api/teams/
+
 function Teams() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
