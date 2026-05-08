@@ -1,0 +1,135 @@
+:root {
+  --octo-bg-start: #eef6ff;
+  --octo-bg-end: #f7fcf4;
+  --octo-text: #1f2a44;
+  --octo-heading: #163570;
+  --octo-link: #1f6ad1;
+  --octo-link-hover: #114a9a;
+  --octo-nav-bg: #ffffff;
+  --octo-nav-link: #31507a;
+  --octo-nav-link-active-bg: #1f6ad1;
+  --octo-table-head-bg: #dce9ff;
+  --octo-table-head-text: #173b7a;
+  --octo-table-row-hover: #f4f8ff;
+  --octo-btn-primary-bg: #1f6ad1;
+  --octo-btn-primary-border: #1f6ad1;
+  --octo-btn-primary-hover: #195cb5;
+}
+
+body {
+  background: radial-gradient(circle at 10% 10%, var(--octo-bg-start), var(--octo-bg-end));
+  color: var(--octo-text);
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #ffffff, #f2f7ff 50%, #edf8f2);
+}
+
+.app-brand-wrap {
+  justify-content: flex-start;
+}
+
+.app-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(31, 106, 209, 0.22);
+  background-color: #fff;
+  padding: 6px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: var(--octo-heading);
+}
+
+a,
+.link-primary {
+  color: var(--octo-link) !important;
+}
+
+a:hover,
+.link-primary:hover {
+  color: var(--octo-link-hover) !important;
+}
+
+.navbar {
+  background-color: var(--octo-nav-bg) !important;
+  border: 1px solid #dce7f8;
+}
+
+.navbar .nav-link {
+  color: var(--octo-nav-link) !important;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  background-color: #eaf2ff;
+}
+
+.navbar .nav-link.active {
+  background-color: var(--octo-nav-link-active-bg) !important;
+  color: #fff !important;
+}
+
+.table thead th {
+  background-color: var(--octo-table-head-bg);
+  color: var(--octo-table-head-text);
+  border-bottom: 0;
+}
+
+.table tbody tr:hover {
+  background-color: var(--octo-table-row-hover);
+}
+
+.btn-primary {
+  background-color: var(--octo-btn-primary-bg);
+  border-color: var(--octo-btn-primary-border);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--octo-btn-primary-hover);
+  border-color: var(--octo-btn-primary-hover);
+}
+
+.btn-outline-primary {
+  color: var(--octo-link);
+  border-color: #93b8f0;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #eaf2ff;
+  color: var(--octo-link-hover);
+  border-color: #7ba7ea;
+}
+
+.card + .card {
+  margin-top: 1rem;
+}
+
+@media (max-width: 576px) {
+  .app-brand-wrap {
+    align-items: flex-start !important;
+    flex-direction: column;
+    gap: 0.75rem !important;
+  }
+}
